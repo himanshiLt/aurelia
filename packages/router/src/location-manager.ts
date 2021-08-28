@@ -90,19 +90,19 @@ export class BrowserLocationManager {
   }
 
   @bound
-  private onPopState(event: IPopStateEvent): void {
+  private onPopState(event: Event): void {
     this.logger.trace(`onPopState()`);
 
     this.events.publish(new LocationChangeEvent(
       ++this.eventId,
       this.getPath(),
       'popstate',
-      event.state,
+      (event as  IPopStateEvent).state,
     ));
   }
 
   @bound
-  private onHashChange(_event: IHashChangeEvent): void {
+  private onHashChange(_event: Event | IHashChangeEvent): void {
     this.logger.trace(`onHashChange()`);
 
     this.events.publish(new LocationChangeEvent(

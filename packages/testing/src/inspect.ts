@@ -113,7 +113,7 @@ function isStackOverflowError(err: Error): boolean {
     try {
       function overflowStack(): void { overflowStack(); }
       overflowStack();
-    } catch (err) {
+    } catch (err: any) {
       maxStack_ErrorMessage = err.message;
       maxStack_ErrorName = err.name;
     }
@@ -1336,7 +1336,7 @@ export function formatProperty(
           str = `${s(`[${label}:`, sp)} ${primitive}${s(']', sp)}`;
         }
         ctx.indentationLvl -= 2;
-      } catch (err) {
+      } catch (err: any) {
         const message = `<Inspection threw (${err.message})>`;
         str = `${s(`[${label}:`, sp)} ${message}${s(']', sp)}`;
       }
@@ -1623,7 +1623,7 @@ export function formatRaw(
         output.push(formatProperty(ctx, value, recurseTimes, keys[i] as string | symbol, extrasType));
       }
     }
-  } catch (err) {
+  } catch (err: any) {
     return handleMaxCallStackSize(ctx, err, constructor!, tag, indentationLvl);
   }
   ctx.seen.pop();

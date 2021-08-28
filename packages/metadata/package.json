@@ -36,12 +36,9 @@
     "rollup": "rollup -c",
     "postrollup": "tsc --emitDeclarationOnly"
   },
+  "dependencies": {},
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "typescript": "^4.3.5"
   },
   "engines": {
     "node": ">=14.17.0"

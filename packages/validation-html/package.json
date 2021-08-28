@@ -50,9 +50,6 @@
     "@aurelia/runtime-html": "2.0.0-alpha.18",
     "@aurelia/validation": "2.0.0-alpha.18"
   },
-  "devDependencies": {
-    "typescript": "^4.3.5"
-  },
   "engines": {
     "node": ">=14.17.0"
   }

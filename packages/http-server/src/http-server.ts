@@ -61,7 +61,7 @@ export class HttpServer implements IHttpServer {
         // eslint-disable-next-line no-await-in-loop
         await handler.handleRequest(context);
       }
-    } catch (err) {
+    } catch (err: any) {
       this.logger.error(`handleRequest Error: ${err.message}\n${err.stack}`);
 
       res.statusCode = HTTPStatusCode.InternalServerError;
@@ -120,7 +120,7 @@ export class Http2Server implements IHttpServer {
       // const buffer = await readBuffer(req); // TODO handle this later
       const context = new HttpContext(this.container, req, res, null!);
       this.http2FileServer.handleRequest(context);
-    } catch (err) {
+    } catch (err: any) {
       this.logger.error(`handleRequest Error: ${err.message}\n${err.stack}`);
 
       res.statusCode = HTTPStatusCode.InternalServerError;
