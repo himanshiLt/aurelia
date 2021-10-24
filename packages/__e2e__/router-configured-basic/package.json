@@ -21,7 +21,8 @@
     "@aurelia/platform-browser": "2.0.0-alpha.21",
     "@aurelia/runtime": "2.0.0-alpha.21",
     "@aurelia/runtime-html": "2.0.0-alpha.21",
-    "perf-monitor": "latest"
+    "perf-monitor": "latest",
+    "typescript": "^4.4.4"
   },
   "devDependencies": {
     "@aurelia/http-server": "2.0.0-alpha.21",

@@ -16,13 +16,14 @@
     "@aurelia/metadata": "2.0.0-alpha.21",
     "@aurelia/platform": "2.0.0-alpha.21",
     "@aurelia/platform-browser": "2.0.0-alpha.21",
-    "@aurelia/runtime-html": "2.0.0-alpha.21",
     "@aurelia/runtime": "2.0.0-alpha.21",
-    "perf-monitor": "latest"
+    "@aurelia/runtime-html": "2.0.0-alpha.21",
+    "perf-monitor": "latest",
+    "typescript": "^4.4.4"
   },
   "devDependencies": {
     "@aurelia/http-server": "2.0.0-alpha.21",
-    "webpack-cli": "^4.2.0",
-    "webpack": "^5.10.3"
+    "webpack": "^5.10.3",
+    "webpack-cli": "^4.2.0"
   }
 }

@@ -1,4 +1,7 @@
 {
   "name": "karma-aurelia-preprocessor",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "typescript": "^4.4.4"
+  }
 }

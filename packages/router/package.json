@@ -46,11 +46,11 @@
     "@aurelia/platform": "2.0.0-alpha.21",
     "@aurelia/platform-browser": "2.0.0-alpha.21",
     "@aurelia/route-recognizer": "2.0.0-alpha.21",
-    "@aurelia/runtime-html": "2.0.0-alpha.21",
-    "@aurelia/runtime": "2.0.0-alpha.21"
+    "@aurelia/runtime": "2.0.0-alpha.21",
+    "@aurelia/runtime-html": "2.0.0-alpha.21"
   },
   "devDependencies": {
-    "typescript": "^4.3.5"
+    "typescript": "^4.4.4"
   },
   "engines": {
     "node": ">=14.17.0"

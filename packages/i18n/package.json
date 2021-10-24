@@ -44,12 +44,12 @@
     "@aurelia/kernel": "2.0.0-alpha.21",
     "@aurelia/metadata": "2.0.0-alpha.21",
     "@aurelia/platform": "2.0.0-alpha.21",
-    "@aurelia/runtime-html": "2.0.0-alpha.21",
     "@aurelia/runtime": "2.0.0-alpha.21",
+    "@aurelia/runtime-html": "2.0.0-alpha.21",
     "i18next": "^17.0.0"
   },
   "devDependencies": {
-    "typescript": "^4.3.5"
+    "typescript": "^4.4.4"
   },
   "engines": {
     "node": ">=14.17.0"
