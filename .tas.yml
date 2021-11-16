@@ -1,0 +1,17 @@
+---
+framework: "jest"
+blocklist:
+  - "src/arith.test.js##2 + 3 = 5"
+postMerge:
+  pattern:
+    - "./src/*.test.js"
+    - "./src/random.test.js"
+preMerge:
+  pattern:
+    - "./src/*.test.js"
+    - "./src/random.test.js"
+preRun:
+  - npm i
+postRun:
+  - node --version
+version: 2.0
