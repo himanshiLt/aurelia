@@ -1,17 +1,49 @@
----
-framework: "jest"
-blocklist:
-  - "src/arith.test.js##2 + 3 = 5"
-postMerge:
-  pattern:
-    - "./src/*.test.js"
-    - "./src/random.test.js"
-preMerge:
-  pattern:
-    - "./src/*.test.js"
-    - "./src/random.test.js"
-preRun:
-  - npm i
-postRun:
-  - node --version
-version: 2.0
+postMerge :
+  preRun: 
+    command:
+      - npm i
+      - npm run build
+  
+  subModules:          #Not to be changed
+      
+      - name: kernel      
+        path : "./packages/__tests__"
+        pattern: 
+          - "./dist/esm/__tests__/1-kernel/**/*.spec.js"
+        
+        framework : mocha
+        configFile : ".mocharc.json"
+      
+      - name: runtime      
+        path : "./packages/__tests__"
+        pattern: 
+          - "./dist/esm/__tests__/2-runtime/*.spec.js"
+        
+        framework : mocha
+        configFile : ".mocharc.json"
+        
+        
+        
+        
+      
+        
+preMerge : 
+  
+  subModules:          #Not to be changed
+      - name: packages      
+        path : "./packages/__tests__"
+        pattern: 
+          - "./dist/esm/__tests__/1-kernel/**/*.spec.js"
+        
+        framework : mocha
+        preRun:
+          command:
+            - node --version
+        postRun:
+            command:
+              - node --version
+        configFile : ".mocharc.json"
+        
+  
+version : 2.0
+nodeVersion: 17.3.1
